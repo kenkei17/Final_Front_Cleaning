@@ -3,9 +3,9 @@
 :root{
     --topHeader:#ecf6fe;
     --blueColor:#50b8e7;
-    --yellowColor:#ffe824;
+    --yellowColor:#0487e2;
     --goldColor: #f7b74d;
-    --headingColor:#13287e;
+    --headingColor:#50b8e7;
     --textColor:#474747;
     --whiteColor:#fff;
     --boxShadow:0 .5rem .5rem -.4rem rgba(0 0 0 /.5);
@@ -31,12 +31,17 @@
     box-sizing: border-box;
     outline: none;
     transition: all .3s ease-in-out;
+   
 }
 html{
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
     font-weight: 400;
     scroll-behavior: smooth;
+   
+}
+html,body{
+    overflow-x: hidden;
 }
 ul{
     list-style: none;
@@ -47,26 +52,29 @@ a{
 }
 h1,h2,h3{
     text-transform: uppercase;
+    color: var(--headingColor);
 }
 h2{
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: bolder;
     color: var(--headingColor);
 }
 section{
     padding:6rem 0;
 }
 .my-btn {
-    background-color: var(--yellowColor);
+    background-color: var(--blueColor);
     color: var(--textColor);
     text-transform: uppercase;
     font-size: 1.4rem;
     padding:1.6rem 2rem;
     border-radius: 2.1rem;
+    font-weight: bolder;
 }
 .my-btn:hover{
     box-shadow: var(--boxShadow);
     transform: scale(1.1);
+    background-color: var(--yellowColor);
     transition: all .3s ease-out; 
 }
 @media (min-width:768px) {
@@ -695,6 +703,8 @@ footer .container .box:first-child {
 
 footer .container .box img {
     margin-bottom: 3rem;
+    height: 80px;
+    width: 180px;
 }
 
 footer .container .box h4 {
@@ -788,3 +798,64 @@ footer .copyright p span {
 
 
 /* footer */
+
+/* Contact US */
+.contact .container-fluid {
+    text-align: center;
+}
+
+.contact .container-fluid p {
+    max-width: 67.3rem;
+    margin: 5rem auto;
+}
+
+.contact .container-fluid .contact-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact .contact-container .contact-left,
+.contact .contact-container .contact-right {
+    flex: 1 1 45%;
+    padding: 0 2rem;
+}
+
+.contact .contact-container .contact-left form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact .contact-container .contact-left form .form-group input,
+.contact .contact-container .contact-left form .form-group textarea {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid #f0f0f0;
+    font-size: 1.6rem;
+}
+
+.contact .contact-container .contact-left form .form-group textarea {
+    resize: none;
+    min-height: 18rem;
+}
+
+.contact .contact-container .contact-left form .form-group input:focus::placeholder,
+.contact .contact-container .contact-left form .form-group textarea:focus::placeholder {
+    opacity: 0;
+}
+
+.contact .contact-container .contact-left form .form-group button {
+    border: none;
+    cursor: pointer;
+}
+
+@media(min-width: 768px) {
+    .contact .container .contact-container {
+        flex-direction: row;
+    }
+}
+
+
+
+/* Contact Us */
