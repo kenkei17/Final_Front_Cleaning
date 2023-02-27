@@ -35,7 +35,7 @@ let review = document.querySelector('#review'),
     currentSlide = 0,
     currentActive = 0,
     reviewTimer;
-
+    
 window.onload = function () {
     function playSlide(slide) {
         for (let i = 0; i < dots.length; i++) {

@@ -70,7 +70,7 @@ section{
     font-size: 1.4rem;
     padding:1.6rem 2rem;
     border-radius: 2.1rem;
-    font-weight: bolder;
+    font-weight: 700;
 }
 .my-btn:hover{
     box-shadow: var(--boxShadow);
@@ -171,11 +171,11 @@ header .container-fluid nav ul li a{
     padding: 1.2rem 2.6rem;
     border-radius: 2rem;
 }
-header .container-fluid nav ul li a.active,
+/* header .container-fluid nav ul li a.active,
 header .container-fluid nav ul li a:hover{
     background-color: var(--blueColor);
     color: var(--whiteColor);
-}
+} */
 
 @media(max-width:992px){
     header .container-fluid{
@@ -953,6 +953,100 @@ footer .copyright p span {
 .book .row form .btn{
     padding:1rem 4rem;
 }
+.pricing .container {
+    text-align: center;
+}
 
+.pricing .container>p {
+    max-width: 67.4rem;
+    margin: 5rem auto;
+}
+
+.pricing .container .pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(32rem, 100%), 1fr));
+    gap: 7rem;
+}
+
+.pricing .container .pricing-container .price-box {
+    position: relative;
+    background-color: var(--whiteColor);
+    padding: 2.7rem 0;
+    border: 1px solid #f5f5f5;
+    border-radius: .5rem;
+    cursor: pointer;
+    box-shadow: 0 0.2rem 0.2rem -0.1rem rgb(0 0 0 / 30%),
+        .2rem 0rem 4rem 1rem rgb(0 0 0 / 10%);
+}
+
+.pricing .pricing-container .price-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgb(155, 213, 255) 100%);
+}
+
+.pricing .pricing-container .price-box:hover::before {
+    width: 100%;
+    height: 85%;
+}
+
+@media(min-width: 1200px) {
+    .pricing .container .pricing-container .price-box:nth-child(2) {
+        transform: translateY(1rem) scale(1.1);
+    }
+}
+
+.pricing .pricing-container .price-box h3 {
+    position: relative;
+    font-size: 2.6rem;
+    color: var(--textColor);
+    text-transform: capitalize;
+    padding-bottom: 2.7rem;
+}
+
+.pricing .pricing-container .price-box .price {
+    position: relative;
+    padding: 2.5rem 0;
+    font-size: 11.9rem;
+    font-weight: 600;
+    color: var(--blueColor);
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.pricing .pricing-container .price-box .price span {
+    font-size: 2.4rem;
+    color: var(--textColor);
+    position: absolute;
+}
+
+.pricing .pricing-container .price-box .price span:first-child {
+    left: 28%;
+}
+
+.pricing .pricing-container .price-box .price span:nth-child(2) {
+    right: 27%;
+}
+
+.pricing .pricing-container .price-box .price p {
+
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin: 0 auto;
+}
+
+.pricing .pricing-container .price-box p {
+    position: relative;
+    font-size: 1.7rem;
+    color: #000;
+    max-width: 22.6rem;
+    margin: 2.4rem auto;
+}
+
+.pricing .pricing-container .price-box p span {
+    color: var(--blueColor);
+}
 
 /* Book  form */
